@@ -18,8 +18,8 @@ const Documents = async ({ params: { id } }: SearchParamProps) => {
   return (
     <main className='flex w-full items-center flex-col'>
       <CollaborativeRoom 
-       roomId={id}
-       roomMetadata={room.metadata}/>
+        roomId={id}
+        roomMetadata={room.metadata} users={[]} currentUserType={'creator'}/>
     </main>
   )
 }
