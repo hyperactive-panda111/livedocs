@@ -19,7 +19,6 @@ const ActiveCollaborators = () => {
                   size-8 ring-dark-100'
                   style={{ border: `3px solid ${color}`}}
                 />
-                {name}
             </li>
         ))}
     </ul>
