@@ -60,6 +60,22 @@ try {
     return parseStringify(updatedRoom);
     
 } catch (error) {
-    
+    console.error(error);
 }
+}
+
+export const getDocuments = async (email: string) => {
+    try {
+        const rooms = await liveblocks.getRooms({userId: email});
+
+        // const hasAccess = Object.keys(room.usersAccesses).includes(userId);
+
+        // if (!hasAccess) {
+        //     throw new Error('You do not have access to this document');
+        // }
+
+        return parseStringify(rooms);
+    } catch (error) {
+        console.log(`Error happened while getting the rooms: ${error}`);
+    }
 }
