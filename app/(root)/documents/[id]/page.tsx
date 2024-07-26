@@ -20,13 +20,10 @@ const Documents = async ({ params: { id } }: SearchParamProps) => {
 
   const usersData = users.map((user: User) => ({
     ...user,
-    userType: room.usersAccesses[user.email]?.includes('room:write')
-    ? 'editor'
-    : 'viewer'
+    userType: room.usersAccesses[user.email]?.includes('room:write') ? 'editor': 'viewer'
   }));
 
-  const currentUserType = room.usersAccesses[clerkUser.emailAddresses[0].emailAddress]?.includes
-  ('room:write') ? 'editor' : 'viewer';
+  const currentUserType = room.usersAccesses[clerkUser.emailAddresses[0].emailAddress]?.includes('room:write') ? 'editor' : 'viewer';
 
   console.log(room, users)
 
@@ -36,7 +33,8 @@ const Documents = async ({ params: { id } }: SearchParamProps) => {
         roomId={id}
         roomMetadata={room.metadata}
         users={usersData} 
-        currentUserType={currentUserType}/>
+        currentUserType={currentUserType}
+      />
     </main>
   )
 }

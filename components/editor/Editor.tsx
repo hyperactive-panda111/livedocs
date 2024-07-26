@@ -44,6 +44,7 @@ export function Editor({ roomId, currentUserType }: { roomId: string; currentUse
       <div className="editor-container size-full">
         <div className='toolbar-wrapper flex min-w-full justify-between'>
           <ToolbarPlugin />
+          { /*currentUserType === 'editor' && <DeleteModal /> */}
         </div>
 
         <div className='editor-wrapper flex flex-col items-center justify-start'>
@@ -64,8 +65,7 @@ export function Editor({ roomId, currentUserType }: { roomId: string; currentUse
           )}
 
           <LiveblocksPlugin>
-            <FloatingComposer className='w-[350px]' />
-            <FloatingThreads threads={threads} />
+            
           </LiveblocksPlugin>
         </div>
       </div>
