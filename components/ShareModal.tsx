@@ -82,7 +82,6 @@ creatorId, currentUserType }: ShareDocumentDialogProps) => {
                      setUserType={setUserType}
                     />
                 </div>
-                <div>
                     <Button type="submit" onClick={shareDocumentHandler}
                     className="gradient-blue flex h-full gap-1 px-5"
                     disabled={loading}>
@@ -102,10 +101,7 @@ creatorId, currentUserType }: ShareDocumentDialogProps) => {
                              user={user.info}
                             />
                         ))}
-
                     </ul>
-
-                </div>
             </div>
         </DialogContent>
     </Dialog>
