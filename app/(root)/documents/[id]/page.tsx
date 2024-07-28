@@ -7,6 +7,8 @@ import { redirect } from 'next/navigation';
 const Documents = async ({ params: { id } }: SearchParamProps) => {
   const clerkUser = await currentUser();
   if (!clerkUser) redirect('/sign-in');
+  console.log(clerkUser);
+  
 
   const room = await getDocument({
     roomId: id,

@@ -10,6 +10,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Input } from './ui/input';
 import Image from 'next/image';
 import { updateDocument } from '@/lib/actions/room.actions';
+import ShareModal from './ShareModal';
 
 const CollaborativeRoom = ({ roomId, roomMetadata, users, currentUserType }: CollaborativeRoomProps) => {
   const [documentTitle, setDocumentTitle] = useState(roomMetadata.title)
@@ -104,6 +105,12 @@ const CollaborativeRoom = ({ roomId, roomMetadata, users, currentUserType }: Col
                 </div>
                 <div className='flex w-full flex-1 justify-end gap-2'>
                   <ActiveCollaborators />
+                  <ShareModal 
+                    roomId={roomId}
+                    collaborators={users}
+                    creatorId={roomMetadata.creatorId}
+                    currentUserType={currentUserType} 
+                />                 
                   <SignedOut>
                     <SignInButton />
                   </SignedOut>
