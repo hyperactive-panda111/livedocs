@@ -9,8 +9,7 @@
 
 ## 🤖 Introduction
 
-Built with Next.js to handle the user interface, Liveblocks for real-time features and styled with TailwindCSS, LiveDocs is a clone of Google Docs. The primary goal is to demonstrate the developer's skills in a real-time environment that creates a lasting impact.
-
+Built with Next.js to handle the user interface, Liveblocks for real-time features and styled with TailwindCSS, LiveDocs is a clone of Google Docs.
 ## ⚙️ Tech Stack
 
 - Next.js
